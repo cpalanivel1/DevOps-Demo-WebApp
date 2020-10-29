@@ -16,13 +16,13 @@ import org.apache.http.HttpStatus;
 import org.apache.http.HttpVersion;
 import org.apache.http.impl.DefaultHttpResponseFactory;
 import org.apache.http.message.BasicStatusLine;
-
+import static org.mockito.Mockito.*;
 import servlet.createpage;
 
 public class createpage_junit {
 	
 	
-	public createpage obj = new createpage();
+	public createpage obj = mock(createpage.class);
 	
 	
 	@Test
@@ -38,7 +38,7 @@ public class createpage_junit {
 		 request.addParameter("contact", "739222687");
 		 request.addParameter("date", "13/04/2017");
 		 request.addParameter("status", "NEW");
-		
+		doNothing().when(obj).doPost(request,response);
 		obj.doPost(request, response);
 		
 	}
