@@ -1,4 +1,4 @@
-FROM tomcat:8-jre8
+FROM karthick2007/app-tomcat-postgres
 
 COPY ./target/AVNCommunication-1.0.war /usr/local/tomcat/webapps
 
