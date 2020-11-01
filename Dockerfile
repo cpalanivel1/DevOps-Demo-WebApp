@@ -1,7 +1,6 @@
 FROM karthick2007/app-tomcat-postgres
 
-COPY ./target/AVNCommunication-1.0.war /var/lib/tomcat8/webapps
-#/usr/local/tomcat/webapps
+COPY ./target/AVNCommunication-1.0.war /usr/local/tomcat/webapps
 
 COPY ./startup.sh /scripts/startup.sh
 
